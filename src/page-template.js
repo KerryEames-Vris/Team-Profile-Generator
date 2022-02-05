@@ -1,10 +1,8 @@
-// create the team
 const generateTeam = team => {
 
-    // create the manager html
     const generateManager = manager => {
         return `
-        <div class="card mx-1 w-1/3 bg-green-800 flex-col justify-between shadow">
+        <div class="card mx-8 basis-1/3 bg-green-800 flex-col justify-between shadow">
         <div class="px-2 py-2">
             <h2 class="card-title text-white">${manager.getName()}</h2>
             <h3 class="card-title text-white"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -22,10 +20,9 @@ const generateTeam = team => {
         `;
     };
 
-    // create the html for engineers
     const generateEngineer = engineer => {
         return `
-        <div class="card mx-1 w-1/3 bg-green-800 flex-col justify-between shadow">
+        <div class="card mx-8 basis-1/3 bg-green-800 flex-col justify-between shadow">
     <div class="px-2 py-2">
         <h2 class="card-title text-white">${engineer.getName()}</h2>
         <h3 class="card-title text-white"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -43,10 +40,9 @@ const generateTeam = team => {
         `;
     };
 
-    // create the html for interns
     const generateIntern = intern => {
         return `
-        <div class="card mx-1 w-1/3 bg-green-800 flex-col justify-between shadow">
+        <div class="card mx-8 basis-1/3 bg-green-800 flex-col justify-between shadow">
     <div class="px-2 py-2">
         <h2 class="card-title text-white">${intern.getName()}</h2>
         <h3 class="card-title text-white"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -85,7 +81,6 @@ const generateTeam = team => {
 
 }
 
-// export function to generate entire page
 module.exports = team => {
 
     return `
@@ -101,11 +96,11 @@ module.exports = team => {
 </head>
 
 <body>
-        <div class="row">
+        <div class="flex justify-center mx-2">
                 <h1 class="mx-2 my-8 text-center font-extrabold text-4xl text-purple-900">My Team</h1>
         </div>
     <div>
-        <div class="row">
+        <div class="flex justify-center mx-8">
             <div class="mx-4 my-4 basis-auto flex justify-center">
                 ${generateTeam(team)}
             </div>

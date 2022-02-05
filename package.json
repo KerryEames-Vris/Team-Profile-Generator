@@ -1,12 +1,14 @@
 {
-    "dependencies": {
-        "inquirer": "^8.2.0",
-        "jest": "^27.4.3"
-    },
-    "scripts": {
-        "test": "jest"
-    },
-    "devDependencies": {
-        "tailwindcss": "^3.0.18"
-    }
+  "dependencies": {
+    "inquirer": "^8.2.0",
+    "jest": "^27.4.3"
+  },
+  "scripts": {
+    "test": "jest --verbose test/*",
+    "start": "node index.js",
+    "reset": "node reset.js"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.0.18"
+  }
 }
